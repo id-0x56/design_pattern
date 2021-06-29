@@ -27,7 +27,7 @@ class EmailNotification extends NotificationDecorator
 {
     public function send($message)
     {
-        echo 'Email notification: ' . $message . '<br/>';
+        echo 'Email: ' . $message;
         $this->notifier->send($message);
     }
 }
@@ -35,4 +35,4 @@ class EmailNotification extends NotificationDecorator
 $decorator = new EmailNotification(
     new Notification()
 );
-$decorator->send('Hello world');
+$decorator->send('Hello World!');
