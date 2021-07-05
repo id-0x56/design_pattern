@@ -1,6 +1,7 @@
 <?php
 
-trait Singleton {
+trait Singleton
+{
     private static $instance = null;
 
     private function __construct()
@@ -18,12 +19,14 @@ trait Singleton {
         //
     }
 
-    public static function getInstance() {
+    public static function getInstance()
+    {
         return self::$instance === null ? self::$instance = new static() : self::$instance;
     }
 }
 
-class Test {
+class Test
+{
     use Singleton;
 
     public function test()

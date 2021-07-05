@@ -18,12 +18,12 @@ class Car
 
 class SimpleFactory
 {
-    public function createBicycle() : Bicycle
+    public function createBicycle(): Bicycle
     {
         return new Bicycle();
     }
 
-    public function createCar() : Car
+    public function createCar(): Car
     {
         return new Car();
     }
